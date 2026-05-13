@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "name": "Oryx Flow",
+    "nameAr": "Oryx Flow",
+    "description": "An entertainment gaming platform (upload, download, and play web games).",
+    "descriptionAr": "منصة ألعاب ترفيهية (رفع، تحميل، ولعب ألعاب الويب)",
+    "image": "assets/Oryx-Flow-Demo.jpeg",
+    "link": "https://saudqxx.github.io/Oryx-Flow-Demo",
+    "tags": ["Gaming", "Web", "Platform"]
+  },
+  {
+    "id": 2,
+    "name": "Cortex Labs",
+    "nameAr": "Cortex Labs",
+    "description": "An intelligent idea analyzer (summarization system, 15 messages, Vercel protocol).",
+    "descriptionAr": "محلل أفكار ذكي (نظام تلخيص، 15 رسالة، بروتوكول Vercel)",
+    "image": "assets/Cortex-Lab-Ai-Demo.jpeg",
+    "link": "https://cortex-lab-ai-demo.vercel.app",
+    "tags": ["AI", "Summarization", "Vercel"]
+  }
+]
