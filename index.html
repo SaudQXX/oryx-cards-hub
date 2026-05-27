@@ -1,4 +1,4 @@
-3<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
@@ -1231,57 +1231,5 @@
       mo.observe(document.getElementById('cardsGrid'), { childList: true });
     });
   </script>
-// Observe existing elements
-    document.querySelectorAll('.fade-up').forEach(el => {
-      el.classList.add('observed');
-      observer.observe(el);
-    });
-
-    // Initial language apply
-    applyLang();
-  });
-
-  /* ─── Smooth navbar background on scroll ───────────────── */
-  window.addEventListener('scroll', () => {
-    const navbar = document.querySelector('.navbar');
-
-    if (window.scrollY > 30) {
-      navbar.style.background = 'rgba(8,12,18,0.95)';
-      navbar.style.borderBottom = '1px solid rgba(201,168,76,0.45)';
-      navbar.style.boxShadow = '0 8px 32px rgba(0,0,0,0.35)';
-    } else {
-      navbar.style.background = 'rgba(8,12,18,0.8)';
-      navbar.style.borderBottom = '1px solid rgba(201,168,76,0.3)';
-      navbar.style.boxShadow = 'none';
-    }
-  });
-
-  /* ─── Prevent image drag ───────────────── */
-  document.addEventListener('dragstart', e => {
-    if (e.target.tagName === 'IMG') e.preventDefault();
-  });
-
-  /* ─── Preload modal images ───────────────── */
-  function preloadImages() {
-    (window._projects || []).forEach(project => {
-      const img = new Image();
-      img.src = project.image;
-    });
-  }
-
-  window.addEventListener('load', preloadImages);
-
-  /* ─── Console Signature ───────────────── */
-  console.log(`
-  ╔══════════════════════════════════════╗
-            ORYX CARDS HUB
-  ════════════════════════════════════════
-      Developed by Saud Turki Qattan
-              SaudQXX
-  ╚══════════════════════════════════════╝
-  `);
-  </script>
-</body>
-</html>
 </body>
 </html>
