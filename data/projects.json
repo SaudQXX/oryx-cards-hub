@@ -3,8 +3,8 @@
     "id": 1,
     "name": "Oryx Flow",
     "nameAr": "Oryx Flow",
-    "description": "An entertainment gaming platform.",
-    "descriptionAr": "منصة ألعاب ترفيهية",
+    "description": "Entertainment gaming platform.",
+    "descriptionAr": "منصة ألعاب ترفيهية | Entertainment gaming platform.",
     "image": "assets/Oryx-Flow-Demo.jpeg",
     "link": "https://saudqxx.github.io/Oryx-Flow-Demo",
     "tags": ["Gaming", "Web", "Platform"]
@@ -13,10 +13,20 @@
     "id": 2,
     "name": "Cortex Labs",
     "nameAr": "Cortex Labs",
-    "description": "An intelligent idea analyzer.",
-    "descriptionAr": "محلل أفكار ذكي",
+    "description": "Intelligent idea analyzer.",
+    "descriptionAr": "محلل أفكار ذكي | Intelligent idea analyzer.",
     "image": "assets/Cortex-Lab-Ai-Demo.jpeg",
     "link": "https://cortex-lab-ai-demo.vercel.app",
     "tags": ["AI", "Summarization", "Vercel"]
+  },
+  {
+    "id": 3,
+    "name": "خطوة البداية",
+    "nameAr": "خطوة البداية",
+    "description": "Starting Is Easier Now.",
+    "descriptionAr": "البداية أسهل الآن | Starting Is Easier Now.",
+    "image": "assets/ss.png",
+    "link": "https://start-step-x.vercel.app",
+    "tags": ["AI", "Arabic SaaS", "Productivity"]
   }
 ]
