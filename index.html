@@ -896,6 +896,150 @@
     /* ══════════════════════════════════════════
        RESPONSIVE
     ══════════════════════════════════════════ */
+    /* ══════════════════════════════════════════
+       QUICK PROFILE Q&A
+    ══════════════════════════════════════════ */
+    .qna-section {
+      padding: 4rem 0;
+      position: relative;
+      z-index: 1;
+    }
+    .qna-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    .qna-item {
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-card);
+      overflow: hidden;
+      background: var(--bg-card);
+      transition: var(--transition);
+    }
+    .qna-item:hover { border-color: var(--border-gold); }
+    .qna-item.open {
+      border-color: var(--border-gold);
+      box-shadow: 0 4px 24px var(--gold-glow);
+    }
+    .qna-btn {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1.1rem 1.5rem;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    .qna-btn:hover { background: var(--gold-glow); }
+    .qna-item.open .qna-btn { background: rgba(201,168,76,0.06); }
+    .qna-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 26px; height: 26px;
+      border-radius: 50%;
+      background: var(--gold-glow);
+      border: 1px solid var(--border-gold);
+      font-family: var(--font-display);
+      font-size: 0.65rem;
+      color: var(--gold-primary);
+      flex-shrink: 0;
+    }
+    .qna-item.open .qna-badge {
+      background: var(--gold-primary);
+      color: var(--bg-void);
+    }
+    .qna-question {
+      flex: 1;
+      font-family: var(--font-arabic);
+      font-size: 0.95rem;
+      color: var(--text-primary);
+      font-weight: 500;
+      line-height: 1.5;
+      text-align: right;
+    }
+    html[lang="en"] .qna-question {
+      font-family: var(--font-serif);
+      font-size: 1rem;
+      text-align: left;
+    }
+    .qna-arrow {
+      width: 18px; height: 18px;
+      color: var(--gold-dim);
+      flex-shrink: 0;
+      transition: transform 0.35s cubic-bezier(0.4,0,0.2,1);
+    }
+    .qna-item.open .qna-arrow {
+      transform: rotate(180deg);
+      color: var(--gold-primary);
+    }
+    .qna-answer-wrap {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s cubic-bezier(0.4,0,0.2,1);
+    }
+    .qna-item.open .qna-answer-wrap { max-height: 200px; }
+    .qna-answer {
+      padding: 1rem 1.5rem 1.25rem;
+      font-family: var(--font-arabic);
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      line-height: 1.85;
+      border-top: 1px solid var(--border-subtle);
+      text-align: right;
+    }
+    html[lang="en"] .qna-answer {
+      font-family: var(--font-serif);
+      font-size: 0.95rem;
+      text-align: left;
+    }
+
+    /* ══════════════════════════════════════════
+       PROJECTS COUNTER (hero stats)
+    ══════════════════════════════════════════ */
+    .hero-stats {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      margin-top: 2.5rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border-subtle);
+    }
+    .hero-stat { display: flex; flex-direction: column; gap: 0.25rem; }
+    .hero-stat-num {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--gold-primary);
+      line-height: 1;
+    }
+    @keyframes count-pulse {
+      0%   { transform: scale(0.8); opacity: 0.3; }
+      60%  { transform: scale(1.12); }
+      100% { transform: scale(1); opacity: 1; }
+    }
+    .hero-stat-num.counting { animation: count-pulse 0.45s ease forwards; }
+    .hero-stat-label {
+      font-family: var(--font-arabic);
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      white-space: nowrap;
+    }
+    html[lang="en"] .hero-stat-label {
+      font-family: var(--font-display);
+      letter-spacing: 0.08em;
+      font-size: 0.65rem;
+    }
+    .hero-stat-sep {
+      width: 1px; height: 32px;
+      background: var(--border-subtle);
+      flex-shrink: 0;
+    }
+
     @media (max-width: 768px) {
       .hero-inner {
         grid-template-columns: 1fr;
@@ -911,6 +1055,8 @@
       html[lang="ar"] .section-line::after { display: none; }
       .navbar { padding: 1rem 1.25rem; }
       .nav-logo-text { font-size: 0.85rem; }
+      .hero-stats { gap: 1rem; flex-wrap: wrap; }
+      .qna-btn { padding: 1rem 1.2rem; }
     }
   </style>
 </head>
@@ -948,6 +1094,22 @@
           </p>
           <div class="hero-cta">
             <a href="#projects" class="btn-primary" data-ar="استعرض المشاريع" data-en="View Projects">استعرض المشاريع</a>
+          </div>
+          <div class="hero-stats">
+            <div class="hero-stat">
+              <span class="hero-stat-num" id="projectsCounter">—</span>
+              <span class="hero-stat-label" data-ar="مشروع منشور" data-en="Live Projects">مشروع منشور</span>
+            </div>
+            <div class="hero-stat-sep"></div>
+            <div class="hero-stat">
+              <span class="hero-stat-num">AI</span>
+              <span class="hero-stat-label" data-ar="+ تطوير ويب" data-en="+ Web Dev">+ تطوير ويب</span>
+            </div>
+            <div class="hero-stat-sep"></div>
+            <div class="hero-stat">
+              <span class="hero-stat-num">∞</span>
+              <span class="hero-stat-label" data-ar="أفكار قادمة" data-en="Ideas Ahead">أفكار قادمة</span>
+            </div>
           </div>
         </div>
 
@@ -987,6 +1149,22 @@
       <div class="cards-grid" id="cardsGrid">
         <div class="cards-loading" data-ar="جارٍ التحميل..." data-en="Loading...">جارٍ التحميل...</div>
       </div>
+    </div>
+  </section>
+
+  <!-- ══ QUICK PROFILE Q&A ══ -->
+  <section class="qna-section" id="qna">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-line">
+          <span data-ar="تعرّف عليّ" data-en="QUICK PROFILE">تعرّف عليّ</span>
+        </div>
+        <h2 class="section-title" data-ar="أسئلة سريعة" data-en="Quick Q&A">أسئلة سريعة</h2>
+        <p class="section-subtitle" data-ar="اضغط على أي سؤال لمعرفة الجواب" data-en="Tap any question to reveal the answer">
+          اضغط على أي سؤال لمعرفة الجواب
+        </p>
+      </div>
+      <div class="qna-list" id="qnaList"></div>
     </div>
   </section>
 
@@ -1103,6 +1281,8 @@
 
       // Re-render cards in correct language
       renderCards(window._projects || []);
+      // Re-render Q&A in correct language
+      renderQna();
     }
 
     /* ─── Projects Data & Cards ────────────────── */
@@ -1112,6 +1292,7 @@
         const projects = await res.json();
         window._projects = projects;
         renderCards(projects);
+        updateCounter(projects.length);
       } catch (e) {
         document.getElementById('cardsGrid').innerHTML =
           `<div class="cards-loading" style="color:var(--gold-dim)">
@@ -1204,9 +1385,112 @@
       });
     }, { threshold: 0.1 });
 
+    /* ─── Quick Profile Q&A ───────────────────── */
+    const qnaData = {
+      ar: [
+        {
+          q: "من أنت كمطور؟",
+          a: "أنا مطوّر تقني أركز على بناء أنظمة متكاملة تعتمد على الذكاء الاصطناعي وتطوير الويب، وأفكر بعقلية بناء منظومات طويلة المدى بدل مشاريع منفصلة."
+        },
+        {
+          q: "ما هي مشاريعك الحالية؟",
+          a: "حالياً أعمل على مشاريع في الذكاء الاصطناعي، أدوات ويب، وأنظمة تحليل بيانات، ضمن تطوير منظومة Oryx كمشروع رئيسي."
+        },
+        {
+          q: "ما هدفك القريب؟",
+          a: "هدفي القريب هو بناء منظومة تقنية مترابطة تجمع مشاريعي في نظام واحد قابل للتوسع مع إطلاق منتجات جاهزة للنشر."
+        },
+        {
+          q: "هل أنت مطور مشاريع أم أنظمة؟",
+          a: "أنا مطور أنظمة، لأن كل مشروع عندي يعتبر جزء من منظومة أكبر وليس منتجاً مستقلاً."
+        },
+        {
+          q: "كيف تريد أن يُنظر إليك؟",
+          a: "أريد أن يُنظر إلي كمطور يبني أنظمة ذكية متقدمة تجمع بين الذكاء الاصطناعي والويب وتقدم حلول قابلة للتوسع."
+        }
+      ],
+      en: [
+        {
+          q: "Who are you as a developer?",
+          a: "I'm a tech developer focused on building integrated systems powered by AI and web development, thinking in long-term ecosystems rather than isolated projects."
+        },
+        {
+          q: "What are your current projects?",
+          a: "I'm currently working on AI tools, web utilities, and data analysis systems — all within the Oryx Ecosystem as my main overarching project."
+        },
+        {
+          q: "What is your near-term goal?",
+          a: "My near-term goal is to build an interconnected tech ecosystem that brings all my projects together into one scalable system, with production-ready product launches."
+        },
+        {
+          q: "Are you a project developer or a systems developer?",
+          a: "I'm a systems developer — every project I build is a component of a larger ecosystem, not a standalone product."
+        },
+        {
+          q: "How do you want to be perceived?",
+          a: "I want to be seen as a developer who builds advanced intelligent systems that combine AI and web development to deliver scalable solutions."
+        }
+      ]
+    };
+
+    let openQna = null;
+
+    function renderQna() {
+      const list = document.getElementById('qnaList');
+      if (!list) return;
+      const items = qnaData[currentLang];
+      list.innerHTML = items.map((item, i) => `
+        <div class="qna-item fade-up" id="qna-${i}" onclick="toggleQna(${i})">
+          <button class="qna-btn">
+            <div class="qna-badge">${i + 1}</div>
+            <span class="qna-question">${item.q}</span>
+            <svg class="qna-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="qna-answer-wrap">
+            <div class="qna-answer">${item.a}</div>
+          </div>
+        </div>
+      `).join('');
+
+      if (openQna !== null) {
+        document.getElementById('qna-' + openQna)?.classList.add('open');
+      }
+
+      requestAnimationFrame(() => {
+        list.querySelectorAll('.fade-up').forEach((el, i) => {
+          setTimeout(() => el.classList.add('visible'), 60 + i * 70);
+        });
+      });
+    }
+
+    function toggleQna(i) {
+      const items = document.querySelectorAll('.qna-item');
+      if (openQna === i) {
+        items[i]?.classList.remove('open');
+        openQna = null;
+      } else {
+        if (openQna !== null) items[openQna]?.classList.remove('open');
+        items[i]?.classList.add('open');
+        openQna = i;
+      }
+    }
+
+    /* ─── Projects Counter ─────────────────────── */
+    function updateCounter(count) {
+      const el = document.getElementById('projectsCounter');
+      if (!el) return;
+      el.classList.remove('counting');
+      void el.offsetWidth;
+      el.textContent = count;
+      el.classList.add('counting');
+    }
+
     /* ─── Init ─────────────────────────────────── */
     document.addEventListener('DOMContentLoaded', () => {
       loadProjects();
+      renderQna();
 
       // Observe future fade-up elements
       const mo = new MutationObserver(() => {
