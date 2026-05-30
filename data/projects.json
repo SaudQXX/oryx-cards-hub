@@ -28,5 +28,15 @@
     "image": "assets/ss.png",
     "link": "https://start-step-x.vercel.app",
     "tags": ["AI", "Arabic SaaS", "Productivity"]
+  },
+  {
+    "id": 4,
+    "name": "Lumos Graph Demo",
+    "nameAr": "Lumos Graph Demo",
+    "description": "AI-powered data visualization and chart generation platform",
+    "descriptionAr": "منصة ذكاء اصطناعي لتحويل البيانات إلى رسوم بيانية ومرئيات تفاعلية| AI-powered data visualization and chart generation platform",
+    "image": "assets/lumos-graph-demo.jpeg",
+    "link": "https://lumos-graph-demo.vercel.app/",
+    "tags": ["AI", "Data Visualization", "Charts"]
   }
 ]
