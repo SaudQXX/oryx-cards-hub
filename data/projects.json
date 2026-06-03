@@ -38,5 +38,15 @@
     "image": "assets/lumos-graph-demo.jpeg",
     "link": "https://lumos-graph-demo.vercel.app/",
     "tags": ["AI", "Data Visualization", "Charts"]
+  },
+    {
+    "id": 5,
+    "name": "Dev Syntax Guard Beta",
+    "nameAr": "Dev Syntax Guard Beta",
+    "description": "Your Smart Code Guard.",
+    "descriptionAr": "حارسُ كودِكَ الذكي| Your Smart Code Guard.",
+    "image": "assets/Dev-Syntax-Guard-Beta.jpeg",
+    "link": "https://dev-syntax-guard-beta.vercel.app",
+    "tags": ["AI", "Purify", "Secure"]
   }
 ]
