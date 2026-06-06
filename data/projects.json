@@ -48,5 +48,15 @@
     "image": "assets/Dev-Syntax-Guard-Beta.jpeg",
     "link": "https://dev-syntax-guard-beta.vercel.app",
     "tags": ["AI", "Purify", "Secure"]
+  },
+    {
+    "id": 6,
+    "name": "Oryx Mind Beta",
+    "nameAr": "Oryx Mind Beta",
+    "description": "Your Smart AI Assistant.",
+   "descriptionAr": "مساعدُكَ الذكي| Your Smart AI Assistant.",
+   "image": "assets/oryx-mind-beta.jpeg",
+   "link": "https://oryx-mind-beta.vercel.app",
+    "tags": ["AI", "Genius", "System"]
   }
 ]
