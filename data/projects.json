@@ -58,5 +58,15 @@
    "image": "assets/oryx-mind-beta.jpeg",
    "link": "https://oryx-mind-beta.vercel.app",
     "tags": ["AI", "Genius", "System"]
+  },
+  {
+    "id": 7,
+    "name": "Oryx Vision Labs",
+    "nameAr": "Oryx Vision Labs",
+    "description": "Hardware Innovation Lab.",
+    "descriptionAr": "مختبرُ ابتكارِ الهاردوير | Hardware Innovation Lab.",
+    "image": "assets/Oryx-Vision-Lab.jpeg",
+    "link": "https://saudqxx.github.io/Oryx-Vision-Lab",
+    "tags": ["Hardware", "Bio-Tech", "Simulation"]
   }
 ]
