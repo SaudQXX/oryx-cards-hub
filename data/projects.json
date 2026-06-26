@@ -1,6 +1,16 @@
 [
-  {
+    {
     "id": 1,
+    "name": "Oryx Horizon",
+    "nameAr": "Oryx Horizon",
+    "description": "Central identity and ecosystem management platform.",
+    "descriptionAr": "منصة مركزية لإدارة الهوية ومنظومة ORYX | Central identity and ecosystem management platform.",
+    "image": "assets/Oryx-Horizon.jpeg",
+    "link": "https://oxidx.vercel.app",
+    "tags": ["OXID", "Identity", "Platform", "SSO"]
+  },
+  {
+    "id":2,
     "name": "Oryx Flow",
     "nameAr": "Oryx Flow",
     "description": "Entertainment gaming platform.",
@@ -10,47 +20,17 @@
     "tags": ["Gaming", "Web", "Platform"]
   },
   {
-    "id": 2,
-    "name": "Cortex Labs",
-    "nameAr": "Cortex Labs",
-    "description": "Intelligent idea analyzer.",
-    "descriptionAr": "محلل أفكار ذكي | Intelligent idea analyzer.",
-    "image": "assets/Cortex-Lab-Ai-Demo.jpeg",
-    "link": "https://cortex-lab-ai-demo.vercel.app",
-    "tags": ["AI", "Summarization", "Vercel"]
-  },
-  {
     "id": 3,
-    "name": "خطوة البداية",
-    "nameAr": "خطوة البداية",
-    "description": "Starting Is Easier Now.",
-    "descriptionAr": "البداية أسهل الآن | Starting Is Easier Now.",
-    "image": "assets/ss.png",
-    "link": "https://start-step-x.vercel.app",
-    "tags": ["AI", "Arabic SaaS", "Productivity"]
+    "name": "Oryx AI Tools",
+    "nameAr": "Oryx AI Tools",
+    "description": "Unified AI tools platform powered by OXID.",
+    "descriptionAr": "منصة موحدة لأدوات الذكاء الاصطناعي تعمل بنظام OXID | Unified AI tools platform.",
+    "image": "assets/Oryx-AI-Tools.png",
+    "link": "https://oryx-ai-tools.vercel.app",
+    "tags": ["AI", "Tools", "OXID", "Platform"]
   },
   {
     "id": 4,
-    "name": "Lumos Graph Demo",
-    "nameAr": "Lumos Graph Demo",
-    "description": "AI-powered data visualization and chart generation platform",
-    "descriptionAr": "منصة ذكاء اصطناعي لتحويل البيانات إلى رسوم بيانية ومرئيات تفاعلية| AI-powered data visualization and chart generation platform",
-    "image": "assets/lumos-graph-demo.jpeg",
-    "link": "https://lumos-graph-demo.vercel.app/",
-    "tags": ["AI", "Data Visualization", "Charts"]
-  },
-    {
-    "id": 5,
-    "name": "Dev Syntax Guard Beta",
-    "nameAr": "Dev Syntax Guard Beta",
-    "description": "Your Smart Code Guard.",
-    "descriptionAr": "حارسُ كودِكَ الذكي| Your Smart Code Guard.",
-    "image": "assets/Dev-Syntax-Guard-Beta.jpeg",
-    "link": "https://dev-syntax-guard-beta.vercel.app",
-    "tags": ["AI", "Purify", "Secure"]
-  },
-    {
-    "id": 6,
     "name": "Oryx Mind Beta",
     "nameAr": "Oryx Mind Beta",
     "description": "Your Smart AI Assistant.",
@@ -60,7 +40,7 @@
     "tags": ["AI", "Genius", "System"]
   },
   {
-    "id": 7,
+    "id": 5,
     "name": "Oryx Vision Labs",
     "nameAr": "Oryx Vision Labs",
     "description": "Hardware Innovation Lab.",
